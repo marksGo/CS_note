@@ -2,7 +2,7 @@
 
 [toc]
 
-## 中文输入法
+## 中文输入法😊
 
 我们使用Fcitx5(小企鹅)来解决输入法：
 
@@ -80,7 +80,7 @@
    
    ![](./images/6.png)
 
-## VPN
+## VPN⚡
 
 ​	由于现在clash for windows以及clash verge rev越来越不好用了，所以我选择mihomo party:
 
@@ -97,6 +97,44 @@ sudo yay -Syu mihomo-party
 > 如果只开启system proxy，firefox需要配置一下：在地址栏输入`about:perferences`,然后划拉到最底，打开Network Setting.配置如下图：
 >
 > ![](./images/8.png)
+
+## 一些问题😭
+
+### windows 和 manjaro的双系统有时候会导致从windows切换到manjaro后，manjaro会搜索不到wifi。
+
+~~~markdown
+**Dual-boot with Windows (双系统启动)**：
+
+- 这里提到的 **dual-boot** 指的是你可能同时在同一台机器上安装了 Manjaro 和 Windows 操作系统。
+- 可能是由于 Windows 系统没有正确关闭，导致它锁定了无线网卡资源，这在双系统设置中时有发生。
+
+**Fast Startup (快速启动)**：
+
+- **Fast Startup** 是 Windows 中的一项功能，旨在加速系统启动。它并不完全关闭系统，而是保存当前的系统状态和内存内容，以便下次启动时能够更快恢复。
+- 这个功能可能会导致硬件设备（如无线网卡）在 Windows 系统启动后未完全释放资源，从而影响在 Linux（如 Manjaro）下的使用。
+
+**Reinstall Windows (重新安装 Windows)**：
+
+- 该段提到某个 Arch 论坛的解决方案包括重新安装 Windows。虽然这听起来极端，但其实只是为了彻底禁用 **fast startup**，确保 Windows 不再锁定硬件资源。
+
+**Proper Shutdown (正确关机)**：
+
+- 如果你不想重新安装 Windows，可以通过命令行来确保 Windows 系统正确关机，从而避免 **fast startup** 干扰硬件。使用以下命令(cmd里运行）来关闭快速启动：
+
+  ```
+  shutdown /s /f /t 0
+  ```
+
+- 或者直接在 Windows 中禁用快速启动，可以通过以下步骤：
+
+  1. 打开 **控制面板**。
+  2. 选择 **电源选项**，然后点击 **选择电源按钮的功能**。
+  3. 点击 **更改当前不可用的设置**。
+  4. 在下方的 **关机设置** 中，取消勾选 **启用快速启动（推荐）**。
+  5. 保存更改并关闭窗口。
+
+
+~~~
 
 
 
