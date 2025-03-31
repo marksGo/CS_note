@@ -60,29 +60,43 @@
 
 5. 之后,打开System setting--->Virtual KeyBoard:点选Fcitx5。
 
-   ![](/home/minxy/Pictures/Screenshots/Screenshot_20250329_225829.png)
+   ![](./images/Screenshot_20250329_225829.png)
 
 6. 最后，reboot,然后会发现下方状态栏右侧有个键盘图标，鼠标右键可以看到一些东西。
 
-   ![](/home/minxy/Pictures/Screenshots/1.png)
+   ![](./images/1.png)
 
 7. system setting --->input method:点击小加号，创建输入法组；然后，点击add input method,
 
-   ![](/home/minxy/Pictures/Screenshots/4.png)
+   ![](./images/4.png)
 
    ​	
 
 8. 然后你最好把那个`only show current langu`取消勾选,找到你的理想输入法（search一下找rime)
 
-   ![](/home/minxy/Pictures/Screenshots/5.png)
+   ![](./images/5.png)
 
    然后Config global configuration
    
-   ![](/home/minxy/Pictures/Screenshots/6.png)
+   ![](./images/6.png)
 
 ## VPN
 
+​	由于现在clash for windows以及clash verge rev越来越不好用了，所以我选择mihomo party:
 
+~~~shell
+sudo yay -Syu mihomo-party
+~~~
+
+安装好mihomo-party后，我们需要将订阅的机场上传(上传不了，自行下载到本地，要把文件名改为有`.yaml`形式的样子），然后打开系统代理或tun模式。然后打开System settings-->wifi and internet-->proxy:
+
+![](./images/7.png)
+
+> **note**:tun模式是一个很强大的模式，他基本不需要你再为其他应用如终端、git、npm、docker等设置代理，但是tun模式在国内登录chatgpt时会提示region 问题，所以我们只开启system proxy，不启动tun模式即可。
+>
+> 如果只开启system proxy，firefox需要配置一下：在地址栏输入`about:perferences`,然后划拉到最底，打开Network Setting.配置如下图：
+>
+> ![](./images/8.png)
 
 
 

@@ -1,6 +1,7 @@
 [git 配置 https和ssh 免密码登录 常用操作命令 - echo曦 - 博客园](https://www.cnblogs.com/cxx8181602/p/11125539.html)
 
-**三.ssh免密配置方法**
+**三.git 提交ssh免密配置方法**
+现在git提交不能使用用户和密码的方式,所以我们采用ssh配置的方法
 
 **配置信息**
 
@@ -24,8 +25,15 @@ ssh-keygen -t rsa
 ```
 cat ~/.ssh/id_rsa.pub
 ```
+**打开 ~/.ssh/id_rsa.pub 文件并复制内容**
 
+在 GitHub 网站上，进入 Settings -> SSH and GPG keys -> New SSH key，将公钥粘贴进去。
 
+配置 Git 使用 SSH： 
+使用`git remote add origin url`,url必须使用ssh形式(git@github.com:xxxx)如果你之前的仓库使用的是 HTTPS URL，可以将远程 URL 改为 SSH：
+```
+git remote set-url origin git@github.com:marksGo/CS_note.git
+```
 
 **提交步骤:**
 
