@@ -16,7 +16,7 @@
 
    ~~~shell
    sudo pacman -S fcitx5 fcitx5-configtool fcitx5-qt fcitx5-gtk fcitx5-chinese-addons
-   fcitx5-material-color fcitx-rime
+   fcitx5-material-color fcitx5-rime
    ~~~
 
 3. 添加环境变量以及默认启动
