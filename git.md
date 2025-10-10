@@ -42,7 +42,7 @@ if it failed:
 you can add the key manually:
 ```
 ssh-keygen -t ed25519 github.com >> ~/.ssh/known_hosts
-~~~
+```
 
 配置 Git 使用 SSH： 
 使用`git remote add origin url`,url必须使用ssh形式(git@github.com:xxxx)如果你之前的仓库使用的是 HTTPS URL，可以将远程 URL 改为 SSH：
@@ -53,21 +53,21 @@ git remote set-url origin git@github.com:marksGo/CS_note.git
 **提交步骤:**
 
 ```
-git status                查看状态
-git add .                 添加所有的修改文件
-git status                查看状态
-git commit -m '备注信息'   添加备注
-git push origin 分支名     提交到分支上
+git status                #查看状态
+git add .                 #添加所有的修改文件
+git status                #查看状态
+[git](git) commit -m '备注信息'   #添加备注
+git push origin 分支名     #提交到分支上
 ```
 
 **分支合并master:**
 
 ```
-git checkout master             切到master分支
-git pull origin master          拉取master
-git merge origin 需合并分支名     合并分支
-git status                      查看状态
-git push origin master          推送master
+git checkout master             #切到master分支
+git pull origin master          #拉取master
+git merge origin 需合并分支名     #合并分支
+git status                      #查看状态
+git push origin master          #推送master
 ```
 
 **git本地项目代码上传至远程仓库操作 :**
@@ -84,7 +84,7 @@ git remote add origin '项目url'
 更新项目,确保没有和远程仓库的代码有冲突: 
 git pull --rebase origin master 
 
-把项目复制到，本地git目录下准备上传。 
+把项目复制到本地git目录下准备上传。 
 
 操作提交master步骤: 
 git add . 
