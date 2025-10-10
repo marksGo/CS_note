@@ -1,4 +1,8 @@
 [git 配置 https和ssh 免密码登录 常用操作命令 - echo曦 - 博客园](https://www.cnblogs.com/cxx8181602/p/11125539.html)
+if you want to pull a specific branch,you need use
+~~~
+git clone -b <branch-name> <url>
+~~~
 
 **三.git 提交ssh免密配置方法**
 现在git提交不能使用用户和密码的方式,所以我们采用ssh配置的方法
@@ -93,7 +97,7 @@ git commit -m '备注信息'
 git push origin master -f     第一次使用,强制提交master分支.（以后提交最好不要使用！
 ```
 
-**--文件目录操作命令**
+**文件目录操作命令**
 
 ```
 mkdir *   创建一个空目录 *指目录名
@@ -102,7 +106,7 @@ cat *     查看*文件内容
 git rm *  删除**文件
 ```
 
-**--git初始化操作**
+**git初始化操作**
 
 ```
 git init                   把当前的目录变成git仓库，生成隐藏.git文件。
@@ -112,7 +116,7 @@ git add *                  把x文件添加到暂存区去。
 git commit –m "*"          提交文件 –m 后面的是注释。
 ```
 
- **--git 克隆分支**
+ **git 克隆分支**
 
 ```
 git clone xxx.git                最简单直接的命令
@@ -120,7 +124,7 @@ git clone xxx.git "指定目录"      clone到指定目录
 git clone -b branchname xxx.git  clone时创建新的分支替代默认Origin HEAD（master）
 ```
 
-**--查看命令**
+**查看命令**
 
 ```
 git status        查看仓库状态
@@ -130,7 +134,7 @@ git reflog        查看历史记录的版本号id（记录你的每一次命令
 git log --pretty=oneline 如果信息量太多可以进行比较好的列表显示
 ```
 
-**--版本回退**
+**版本回退**
 
 ```
 git reset –hard HEAD^       回退到上一个版本
@@ -138,7 +142,7 @@ git reset --hard HEAD~第几个 如果想回退到第3个版本，使用git rese
 git reset --hard 057d       回退到某一个具体的版本号
 ```
 
- **--撤销修改**
+ **撤销修改**
 
 ```
 git checkout file-name 恢复某个已修改的文件（撤销未提交的修改）：
@@ -146,7 +150,7 @@ git revert HEAD        还原最近一次提交的修改：
 git revert commit-id   还原指定版本的修改
 ```
 
-**--分支管理**
+**分支管理**
 
 
 
@@ -169,7 +173,7 @@ git push --set-upstream origin dev   提交修改并创建远程分支dev
 
 
 
-**--tag相关操作**
+**tag相关操作**
 
 
 
@@ -184,7 +188,7 @@ git push origin name 将tag提交到远程
 
 
 
-**--隐藏的文件**
+**隐藏的文件**
 
 ```
 git stash       把当前的工作隐藏起来 等以后恢复现场后继续工作
@@ -194,7 +198,7 @@ git stash drop  删除文件
 git stash pop   恢复文件的同时 也删除文件
 ```
 
-**--查看远程库信息(git remote的用法)**
+**查看远程库信息(git remote的用法)**
 
 ```
 git remote       查看远程库的信息
@@ -204,7 +208,7 @@ git remote rename oldname newname 重命名仓库
 git remote rm                     删除仓库
 ```
 
-**--将远程分支拉取到本地**
+**远程分支拉取到本地**
 
 ```
 方法一：git checkout -b 本地分支名x origin/远程分支名x
