@@ -45,8 +45,21 @@ ssh -T git@github.com
 if it failed:
 you can add the key manually:
 ```
-ssh-keygen -t ed25519 github.com >> ~/.ssh/known_hosts
+ssh-keyscan -t ed25519  github.com >> ~/.ssh/known_hosts
 ```
+if it error with
+~~~
+$ ssh -T git@github.com
+The authenticity of host '[ssh.github.com]:443 ([198.18.0.105]:443)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+~~~
+you can use `-p` to assign a port such as 443
+~~~
+ssh-keyscan -t ed25519 -p 443  github.com >> ~/.ssh/known_hosts
+~~~
 
 配置 Git 使用 SSH： 
 使用`git remote add origin url`,url必须使用ssh形式(git@github.com:xxxx)如果你之前的仓库使用的是 HTTPS URL，可以将远程 URL 改为 SSH：
